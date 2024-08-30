@@ -1,0 +1,24 @@
+<script setup lang="ts"></script>
+
+<template>
+  <span className="blinking-cursor">|</span>
+</template>
+
+<style scoped>
+.blinking-cursor {
+  font-weight: normal;
+  color: var(--orange);
+  width: 5px;
+  overflow: hidden;
+  animation: blink 0.8s infinite;
+}
+@keyframes blink {
+  from,
+  to {
+    color: transparent;
+  }
+  50% {
+    color: var(--orange);
+  }
+}
+</style>
